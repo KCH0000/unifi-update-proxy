@@ -30,7 +30,7 @@ NGINX stream-прокси (SNI passthrough) для доступа UniFi-устр
 ## Запуск
 
 ```bash
-git clone https://github.com/<your-username>/unifi-update-proxy.git
+git clone https://github.com/KCH0000/unifi-update-proxy.git
 cd unifi-update-proxy
 docker compose up -d --build
 ```
@@ -95,10 +95,11 @@ dig +short fw-download.ui.com   # → IP прокси
 ```
 ├── docker-compose.yml
 ├── Dockerfile
+├── LICENSE
 ├── nginx.conf
 └── stream.conf.d/unifi-firmware-proxy.conf
 ```
 
 ## Лицензия
 
-MIT
+[MIT](LICENSE)
