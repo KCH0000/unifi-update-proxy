@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  unifi-proxy:
+    build: .
+    container_name: unifi-proxy
+    ports:
+      - "443:443"
+    restart: unless-stopped
+    volumes:
+      - nginx_logs:/var/log/nginx
+    networks:
+      - unifi-proxy-net
+
+volumes:
+  nginx_logs:
+
+networks:
+  unifi-proxy-net:
+    driver: bridge
